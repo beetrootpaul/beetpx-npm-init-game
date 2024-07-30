@@ -1,0 +1,35 @@
+{
+  "name": "@beetpx/create-beetpx-game",
+  "version": "0.0.3",
+  "author": "Beetroot Paul",
+  "license": "MIT",
+  "description": "A tool for creating new BeetPx projects.",
+  "keywords": [
+    "beetpx",
+    "scaffold",
+    "bootstrap",
+    "tool",
+    "game development"
+  ],
+  "homepage": "https://github.com/beetrootpaul/beetpx-npm-init-game#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beetrootpaul/beetpx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/beetrootpaul/beetpx/issues"
+  },
+  "files": [
+    "init-game.js",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "bin": {
+    "create-beetpx-game": "init-game.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {}
+}
