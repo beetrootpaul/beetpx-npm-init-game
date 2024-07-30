@@ -33,6 +33,24 @@ if (fs.existsSync(projectPath)) {
     process.exit(1);
 }
 
-console.log(`Creating a new BeetPx project in: ${projectPath}`);
+console.log(`Creating a new BeetPx project in: ${projectPath} ...`);
 fs.mkdirSync(projectPath);
 
+fs.cpSync(
+    path.resolve(__dirname, "initial-project-files"),
+    projectPath,
+    {recursive: true},
+);
+
+injectProjectName(projectName, path.resolve(projectPath, "package.json"));
+injectProjectName(projectName, path.resolve(projectPath, "README.md"));
+
+console.log(`Done!`);
+
+/////////////////////////////////////////////////////////////////////////////
+
+function injectProjectName(projectName, filePath) {
+    let content = fs.readFileSync(filePath, {encoding: "utf8"});
+    content = content.replace(/__PROJECT_NAME__/g, projectName);
+    fs.writeFileSync(filePath, content, {encoding: "utf8"});
+}
