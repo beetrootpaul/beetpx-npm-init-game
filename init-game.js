@@ -2,6 +2,9 @@
 
 'use strict';
 
+const path = require("path");
+const fs = require("fs");
+
 const expectedNodeMinVersionMajor = 18;
 const currentNodeVersionMajor = process.versions.node?.split('.')?.[0];
 
@@ -24,4 +27,12 @@ if (!projectNameConstraints.test(projectName)) {
     process.exit(1);
 }
 
-console.log(`Will create project: ${projectName}`);
+const projectPath = path.resolve(process.cwd(), projectName);
+if (fs.existsSync(projectPath)) {
+    console.warn(`Cannot create the project. Its folder already exists: ${projectPath}`);
+    process.exit(1);
+}
+
+console.log(`Creating a new BeetPx project in: ${projectPath}`);
+fs.mkdirSync(projectPath);
+
