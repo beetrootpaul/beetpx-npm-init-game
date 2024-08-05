@@ -51,6 +51,7 @@ fs.renameSync(
 
 injectProjectName(projectName, path.resolve(projectPath, "package.json"));
 injectProjectName(projectName, path.resolve(projectPath, "README.md"));
+injectProjectName(projectName, path.resolve(projectPath, "src/main.ts"));
 
 console.log(`Done!`);
 

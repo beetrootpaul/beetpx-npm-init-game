@@ -47,7 +47,7 @@ $.setOnDraw(() => {
  * `start` is used to configure BeetPx app and start it.
  */
 $.start({
-    gameId: "@beetpx/example-basic",
+    gameId: "__PROJECT_NAME__",
 
     /**
      * Here are names of asset files to be fetched by the BeetPx on load
