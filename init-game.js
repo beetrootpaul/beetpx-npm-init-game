@@ -42,6 +42,13 @@ fs.cpSync(
     {recursive: true},
 );
 
+// A fix for `npm publish` not including the `.gitignore`: let's name it differently
+// (here: `_gitignore`) and then rename back to `.gitignore` during the project init.
+fs.renameSync(
+    path.resolve(projectPath, "_gitignore"),
+    path.resolve(projectPath, ".gitignore"),
+);
+
 injectProjectName(projectName, path.resolve(projectPath, "package.json"));
 injectProjectName(projectName, path.resolve(projectPath, "README.md"));
 
