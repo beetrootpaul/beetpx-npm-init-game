@@ -20,7 +20,7 @@ $.setOnUpdate(() => {
      * `getPressedDirection` returns a 2D vector representing the pressed
      * state of directional buttons. For example: "right" is (1,0).
      */
-    const positionDiff = $.getPressedDirection().mul(3);
+    const positionDiff = $.getPressedDirection().normalize().mul(3);
     logoPosition = logoPosition.add(positionDiff).clamp($v_0_0, $.canvasSize);
 });
 
@@ -47,7 +47,7 @@ $.setOnDraw(() => {
  * `start` is used to configure BeetPx app and start it.
  */
 $.start({
-    gameId: "@beetpx/example-basic",
+    gameId: "__PROJECT_NAME__",
 
     /**
      * Here are names of asset files to be fetched by the BeetPx on load
