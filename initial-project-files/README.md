@@ -27,7 +27,7 @@ archive out of its files. Such package is ready to be used e.g. on https://itch.
 
 ### `npm run tsc`
 
-Checks the project in term of its TypeScript types.
+Checks the project in terms of its TypeScript types.
 
 #### `npm run tsc:watch`
 

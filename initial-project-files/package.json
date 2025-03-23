@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.0.0"
   },
   "scripts": {
     "start": "beetpx dev --open",
@@ -13,7 +13,7 @@
     "tsc:watch": "tsc --watch"
   },
   "devDependencies": {
-    "@beetpx/beetpx": "0.51.2",
-    "typescript": "5.5.3"
+    "@beetpx/beetpx": "0.56.0",
+    "typescript": "5.8.2"
   }
 }
